@@ -80,7 +80,7 @@ function App() {
           <div className="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Mishkah App */}
           <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
             <div className="h-48 bg-gradient-to-br from-emerald-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
@@ -91,18 +91,64 @@ function App() {
             </div>
             <div className="p-8 flex flex-col flex-1">
               <div className="flex justify-between items-start mb-4">
-                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">Mishkah App</h4>
+                <h4 className="text-xl font-bold text-white group-hover:text-lime-400 transition-colors">Mishkah App</h4>
                 <span className="bg-lime-400/10 text-lime-400 px-3 py-1 rounded-full text-[10px] font-bold border border-lime-400/20">LIVE</span>
               </div>
               <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
                 A social platform for education and community growth. Developed with a mobile-first approach and high-performance API integration.
               </p>
               <div className="flex gap-4 mt-auto">
-                <a href="https://mishkah-app.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 text-white hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2">
+                <a href="https://mishkat-platform.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 text-white hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2">
                   <IconExternal /> Live Demo
                 </a>
                 <a href="https://github.com/23MED-JUDA/mishkah" target="_blank" rel="noreferrer" className="px-4 bg-white/5 hover:bg-white/10 text-white py-3 rounded-xl font-bold transition-all flex items-center justify-center">
                   <IconGithub />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Video Downloader App */}
+          <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
+            <div className="h-48 bg-gradient-to-br from-purple-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
+               <div className="bg-black/60 backdrop-blur-md border border-purple-500/20 px-6 py-3 rounded-full text-purple-400 font-bold tracking-widest text-xs relative z-10">
+                  UTILITY APP
+               </div>
+            </div>
+            <div className="p-8 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-xl font-bold text-white group-hover:text-lime-400 transition-colors">Video Downloader</h4>
+                <span className="bg-lime-400/10 text-lime-400 px-3 py-1 rounded-full text-[10px] font-bold border border-lime-400/20">LIVE</span>
+              </div>
+              <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
+                A fast and reliable video downloader application. Built with modern web technologies for optimal performance.
+              </p>
+              <div className="flex gap-4 mt-auto">
+                <a href="https://dowanload-ivory.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 text-white hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2">
+                  <IconExternal /> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* To-Do App */}
+          <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
+            <div className="h-48 bg-gradient-to-br from-pink-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
+               <div className="bg-black/60 backdrop-blur-md border border-pink-500/20 px-6 py-3 rounded-full text-pink-400 font-bold tracking-widest text-xs relative z-10">
+                  PRODUCTIVITY
+               </div>
+            </div>
+            <div className="p-8 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-xl font-bold text-white group-hover:text-lime-400 transition-colors">Smart To-Do List</h4>
+                <span className="bg-lime-400/10 text-lime-400 px-3 py-1 rounded-full text-[10px] font-bold border border-lime-400/20">LIVE</span>
+              </div>
+              <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
+                An intuitive task management application designed to boost productivity and keep track of your daily goals efficiently.
+              </p>
+              <div className="flex gap-4 mt-auto">
+                <a href="https://to-do-iota-bice.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 text-white hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2">
+                  <IconExternal /> Live Demo
                 </a>
               </div>
             </div>
@@ -117,7 +163,7 @@ function App() {
             </div>
             <div className="p-8 flex flex-col flex-1">
               <div className="flex justify-between items-start mb-4">
-                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">Team Project</h4>
+                <h4 className="text-xl font-bold text-white group-hover:text-lime-400 transition-colors">Team Project</h4>
               </div>
               <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
                 A premium, luxury-themed graduation project landing page featuring 3D interactions, smooth scrolling, and dynamic team presentation.
@@ -139,7 +185,7 @@ function App() {
             </div>
             <div className="p-8 flex flex-col flex-1">
               <div className="flex justify-between items-start mb-4">
-                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">API Teacher</h4>
+                <h4 className="text-xl font-bold text-white group-hover:text-lime-400 transition-colors">API Teacher</h4>
               </div>
               <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
                 A robust backend API service designed for managing teachers, courses, and educational content seamlessly.
@@ -161,7 +207,7 @@ function App() {
             </div>
             <div className="p-8 flex flex-col flex-1">
               <div className="flex justify-between items-start mb-4">
-                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">Space Exploration</h4>
+                <h4 className="text-xl font-bold text-white group-hover:text-lime-400 transition-colors">Space Exploration</h4>
               </div>
               <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
                 A creative web project featuring beautiful UI/UX designs to explore space content with interactive animations.
