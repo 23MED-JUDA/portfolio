@@ -30,9 +30,9 @@ function App() {
       </nav>
 
       {/* 2. قسم التعريف - Hero Section */}
-      <header className="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1 text-center md:text-left">
-          <h2 className="text-lime-400 font-mono mb-4 text-lg">Frontend Developer & API Expert</h2>
+      <header className="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center gap-12">
+        <div className="flex-1 text-center md:text-left relative z-10">
+          <h2 className="text-lime-400 font-mono mb-4 text-lg tracking-widest uppercase">Frontend Developer & API Expert</h2>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight text-white">
             Ahmed Juda
           </h1>
@@ -40,75 +40,140 @@ function App() {
             Building modern web applications with <span className="text-white font-semibold">React</span> and <span className="text-white font-semibold">Tailwind CSS</span>. 
             Creator of the <a href="https://mishkah-app.vercel.app/" target="_blank" rel="noreferrer" className="text-lime-400 border-b border-lime-400/30 hover:border-lime-400">Mishkah App</a>.
           </p>
-          <div className="flex gap-4 justify-center md:justify-start">
-             <a href="https://api.whatsapp.com/send/?phone=201095125229" target="_blank" rel="noreferrer" className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-all text-sm flex items-center gap-2">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+             <a href="https://api.whatsapp.com/send/?phone=201095125229" target="_blank" rel="noreferrer" className="bg-lime-400 text-black px-8 py-3 rounded-xl font-bold hover:bg-lime-300 transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] text-sm flex items-center gap-2">
                 <IconWhatsapp /> Let's Chat
              </a>
-             <a href="https://github.com/23MED-JUDA" target="_blank" rel="noreferrer" className="border border-white/10 bg-white/5 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all text-sm flex items-center gap-2">
+             <a href="https://github.com/23MED-JUDA" target="_blank" rel="noreferrer" className="border border-white/10 bg-white/5 px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-all text-sm flex items-center gap-2">
                 <IconGithub /> GitHub
              </a>
           </div>
         </div>
         
-        {/* صندوق التواصل الاجتماعي السريع */}
-        <div className="flex-1 relative w-full max-w-sm">
-           <div className="relative border border-white/10 p-10 rounded-3xl bg-neutral-900/40 backdrop-blur-xl shadow-2xl">
-             <div className="text-center">
-                <p className="text-lime-400 font-mono text-xs mb-6 uppercase tracking-[0.2em]">Connect with me</p>
-                <div className="flex justify-center gap-8">
-                   <a href="https://web.facebook.com/judax2/" target="_blank" rel="noreferrer" className="hover:text-lime-400 transition-all scale-125"><IconFacebook /></a>
-                   <a href="https://www.instagram.com/juda_x2" target="_blank" rel="noreferrer" className="hover:text-lime-400 transition-all scale-125"><IconInstagram /></a>
-                   <a href="https://www.linkedin.com/in/ahmed-juda-50127638b/" target="_blank" rel="noreferrer" className="hover:text-lime-400 transition-all scale-125"><IconLinkedin /></a>
-                </div>
+        {/* الصورة الشخصية وصندوق التواصل */}
+        <div className="flex-1 relative w-full max-w-sm flex flex-col items-center group">
+           {/* مكان الصورة الشخصية */}
+           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 border-2 border-dashed border-lime-400/40 group-hover:border-lime-400 transition-all duration-500 mb-8">
+             <div className="w-full h-full rounded-full overflow-hidden bg-neutral-900 border-4 border-[#0a0a0a] relative">
+               {/* Replace src with your actual image path e.g. /me.jpeg */}
+               <img src="/me.jpeg" alt="Ahmed Juda" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/400x400/111/a3e635?text=Your+Photo" }} />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
              </div>
+             
+             {/* Glowing background */}
+             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[120%] h-[120%] bg-lime-400/20 rounded-full blur-[80px] group-hover:bg-lime-400/30 transition-all duration-500"></div>
            </div>
-           <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-lime-400/20 rounded-full blur-[80px]"></div>
+
+           {/* Social links */}
+           <div className="flex justify-center gap-6 bg-white/5 border border-white/10 px-8 py-4 rounded-2xl backdrop-blur-md relative z-10">
+              <a href="https://web.facebook.com/judax2/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-lime-400 transition-all hover:-translate-y-1"><IconFacebook /></a>
+              <a href="https://www.instagram.com/juda_x2" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-lime-400 transition-all hover:-translate-y-1"><IconInstagram /></a>
+              <a href="https://www.linkedin.com/in/ahmed-juda-50127638b/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-lime-400 transition-all hover:-translate-y-1"><IconLinkedin /></a>
+           </div>
         </div>
       </header>
 
       {/* 3. قسم المشاريع - Projects Section */}
       <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
-        <div className="flex items-center gap-4 mb-12">
-          <h3 className="text-3xl font-bold italic">Featured Projects</h3>
-          <div className="h-[1px] flex-1 bg-white/10"></div>
+        <div className="flex items-center gap-4 mb-16">
+          <h3 className="text-4xl font-bold italic tracking-tight">Featured <span className="text-lime-400">Projects</span></h3>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* مشروع مشكاة */}
-          <div className="group bg-[#111] border border-white/5 rounded-2xl overflow-hidden hover:border-lime-400/40 transition-all duration-500">
-            <div className="h-56 bg-gradient-to-br from-emerald-900/30 to-black flex items-center justify-center">
-               <div className="bg-black/60 backdrop-blur-md border border-lime-500/20 px-6 py-3 rounded-full text-lime-400 font-bold tracking-widest text-xs">
-                  MISHKAH PROJECT
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* Mishkah App */}
+          <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
+            <div className="h-48 bg-gradient-to-br from-emerald-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
+               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+               <div className="bg-black/60 backdrop-blur-md border border-lime-500/20 px-6 py-3 rounded-full text-lime-400 font-bold tracking-widest text-xs relative z-10">
+                  MISHKAH PLATFORM
                </div>
             </div>
-            <div className="p-8">
-              <div className="flex justify-between items-center mb-4">
-                <h4 className="text-2xl font-bold text-white">Mishkah App</h4>
-                <div className="flex gap-2">
-                  <span className="bg-lime-400/10 text-lime-400 px-2 py-1 rounded text-[10px] font-bold">LIVE</span>
-                </div>
+            <div className="p-8 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">Mishkah App</h4>
+                <span className="bg-lime-400/10 text-lime-400 px-3 py-1 rounded-full text-[10px] font-bold border border-lime-400/20">LIVE</span>
               </div>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
                 A social platform for education and community growth. Developed with a mobile-first approach and high-performance API integration.
               </p>
-              <div className="flex gap-6">
-                <a href="https://mishkah-app.vercel.app/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-lime-400 hover:text-lime-300 transition-colors">
+              <div className="flex gap-4 mt-auto">
+                <a href="https://mishkah-app.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 text-white hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2">
                   <IconExternal /> Live Demo
                 </a>
-                <a href="https://github.com/23MED-JUDA" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-white transition-colors">
-                  <IconGithub /> Source
+                <a href="https://github.com/23MED-JUDA/mishkah" target="_blank" rel="noreferrer" className="px-4 bg-white/5 hover:bg-white/10 text-white py-3 rounded-xl font-bold transition-all flex items-center justify-center">
+                  <IconGithub />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* خانة مشروع قادم */}
-          <div className="border border-dashed border-white/10 rounded-2xl flex flex-col items-center justify-center p-12 text-center group hover:bg-white/5 transition-colors">
-             <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <span className="text-2xl text-gray-600">+</span>
-             </div>
-             <p className="text-gray-500 font-medium">Your Next Big Project</p>
+          {/* Graduation Project (Team) */}
+          <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
+            <div className="h-48 bg-gradient-to-br from-indigo-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
+               <div className="bg-black/60 backdrop-blur-md border border-indigo-500/20 px-6 py-3 rounded-full text-indigo-400 font-bold tracking-widest text-xs relative z-10">
+                  LANDING PAGE
+               </div>
+            </div>
+            <div className="p-8 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">Team Project</h4>
+              </div>
+              <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
+                A premium, luxury-themed graduation project landing page featuring 3D interactions, smooth scrolling, and dynamic team presentation.
+              </p>
+              <div className="flex gap-4 mt-auto">
+                <a href="https://github.com/23MED-JUDA/team" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 text-white">
+                  <IconGithub /> View Source
+                </a>
+              </div>
+            </div>
           </div>
+
+          {/* API Teacher */}
+          <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
+            <div className="h-48 bg-gradient-to-br from-orange-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
+               <div className="bg-black/60 backdrop-blur-md border border-orange-500/20 px-6 py-3 rounded-full text-orange-400 font-bold tracking-widest text-xs relative z-10">
+                  BACKEND SERVICE
+               </div>
+            </div>
+            <div className="p-8 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">API Teacher</h4>
+              </div>
+              <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
+                A robust backend API service designed for managing teachers, courses, and educational content seamlessly.
+              </p>
+              <div className="flex gap-4 mt-auto">
+                <a href="https://github.com/23MED-JUDA/api-teacher" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 text-white">
+                  <IconGithub /> View Source
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Space Project */}
+          <div className="group relative bg-[#111] border border-white/5 rounded-3xl overflow-hidden hover:border-lime-400/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(163,230,53,0.1)] flex flex-col">
+            <div className="h-48 bg-gradient-to-br from-blue-900/30 to-black flex items-center justify-center relative overflow-hidden shrink-0">
+               <div className="bg-black/60 backdrop-blur-md border border-blue-500/20 px-6 py-3 rounded-full text-blue-400 font-bold tracking-widest text-xs relative z-10">
+                  UI/UX SHOWCASE
+               </div>
+            </div>
+            <div className="p-8 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-2xl font-bold text-white group-hover:text-lime-400 transition-colors">Space Exploration</h4>
+              </div>
+              <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-1">
+                A creative web project featuring beautiful UI/UX designs to explore space content with interactive animations.
+              </p>
+              <div className="flex gap-4 mt-auto">
+                <a href="https://github.com/23MED-JUDA/Space" target="_blank" rel="noreferrer" className="flex-1 text-center bg-white/5 hover:bg-lime-400 hover:text-black py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 text-white">
+                  <IconGithub /> View Source
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
